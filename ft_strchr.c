@@ -15,11 +15,13 @@ char *strchr(const char *s, int c)
 	int i;
 	char *ptr;
 
-	ptr = (unsigned char *)s;
+	ptr = (char *)s;
+	i = 0;
 	while(s[i] != 0)
 	{
 		if (s[i] == c)
 			return (ptr + i);
+		i++;
 	}
 	if (c == 0)
 		return (ptr + i);

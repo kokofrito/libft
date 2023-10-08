@@ -16,12 +16,12 @@ char *strrchr(const char *s, int c)
 	char *ptr;
 
 	i = 0;
-	
-	ptr = (unsigned char *)s;
+	ptr = (char *)s;
 	while(s[i] != 0)
 	{
 		if (s[i] == c)
 			return (ptr + i);
+		i++;
 	}
 	if (c == 0)
 		return (ptr + i);
